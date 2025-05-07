@@ -7,14 +7,15 @@
   --done: #44d27a;
   --fav: #f6c244;
 }
-
 body {
   margin: 0;
   background-color: var(--bg);
   color: var(--fg);
   font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-
 header {
   display: flex;
   flex-wrap: wrap;
@@ -24,7 +25,6 @@ header {
   background-color: var(--card);
   border-bottom: 1px solid var(--border);
 }
-
 header input,
 header select,
 header button {
@@ -34,17 +34,35 @@ header button {
   padding: 0.5rem;
   border-radius: 6px;
 }
-
 main {
   padding: 1.2rem;
+  flex: 1;
 }
-
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--card);
+  border-top: 1px solid var(--border);
+  margin-top: auto;
+}
+footer p {
+  margin: 0;
+  color: var(--fg);
+  font-size: 0.9rem;
+}
+footer a {
+  color: var(--accent);
+  font-weight: 600;
+}
+footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
 .writeup-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
 }
-
 .card {
   background: var(--card);
   border: 1px solid var(--border);
@@ -54,47 +72,38 @@ main {
   flex-direction: column;
   justify-content: space-between;
 }
-
 .card h3 {
   margin: 0 0 0.5rem 0;
 }
-
 .card h3 a {
   color: var(--fg);
   text-decoration: none;
   transition: color 0.2s;
 }
-
 .card h3 a:hover {
   color: var(--accent);
 }
-
 .meta {
   font-size: 0.85rem;
   color: #aaa;
   margin-bottom: 0.8rem;
 }
-
 a {
   color: #b0b0b0; /* soft neutral gray */
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease-in-out;
 }
-
 a:hover {
   color: #ffffff; /* clean white on hover */
   text-decoration: underline;
 }
-
-
 .badges {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin-top: 1rem;
 }
-
 .badge {
   cursor: pointer;
   padding: 6px 10px;
@@ -105,12 +114,10 @@ a:hover {
   color: var(--fg);
   border: 1px solid transparent;
 }
-
 .done {
   background-color: var(--done);
   color: #000;
 }
-
 .fav {
   background-color: var(--fav);
   color: #000;

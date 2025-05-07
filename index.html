@@ -1,33 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title> Writeup DB</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Writeup DB</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="dark">
+    <header>
+      <h1>Writeup DB</h1>
 
-  <header>
-    <h1>Writeup DB</h1>
+      <input type="text" id="searchInput" placeholder="🔍 Search writeups..." />
 
-    <input type="text" id="searchInput" placeholder="🔍 Search writeups..." />
+      <select id="categorySelect">
+        <option value="">📂 All Categories</option>
+      </select>
 
-    <select id="categorySelect">
-      <option value="">📂 All Categories</option>
-    </select>
+      <button id="showFavs">⭐ Favorites</button>
+      <button id="showDone">✅ Done</button>
+      <button id="showAll">📋 All</button>
+    </header>
 
-    <button id="showFavs">⭐ Favorites</button>
-    <button id="showDone">✅ Done</button>
-    <button id="showAll">📋 All</button>
-  </header>
-
-  <main>
-    <div id="writeupList" class="writeup-grid"></div>
-  </main>
-  <footer>
-    <p>Made with AI and ❤️ by <a href="https://sudarshandevkota.com.np" target="_blank">TheRawBit</a></p>
-  </footer>
-  <script src="app.js"></script>
-</body>
+    <main>
+      <div id="writeupList" class="writeup-grid"></div>
+    </main>
+    <footer>
+      <p>
+        Vibe Coded with ❤️ by
+        <a href="https://sudarshandevkota.com.np" target="_blank">TheRawBit</a>
+      </p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
 </html>
